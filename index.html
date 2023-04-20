@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@600;700&family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <header>
+               <div class="containerforinput">
+                    <input type="text" id="input" placeholder="Enter the city...">
+                    <input type="submit" id="button" value="ADD"></input>
+                </div>
+        </header>
+        <div id="content">
+            <div id="city"><span id="span">Dnipro, UA<span></div>
+                <div id="date">
+                    <div id="clouds"><img src="img/icons/cloud-regular-24 (1).png" alt="" id="img"></div>
+                    <div id="temperature">14C&#176</div>
+                <div id="characteristics">
+                    <div id="clearsky">clear sky</div>
+                    <div id="wind">wind: 1mph</div>
+                    <div id="humidity">humidity 41%</div>     
+                </div>
+                    <button id="remove">Delete</button>
+                </div>
+        </div>
+
+    <div id="weatherlocation">
+        <div id="yourcity">YOUR CITY</div>
+        <div id="cloudsandtemperature">
+            <div id="cloud">
+                <img src="img/icons/cloud-regular-24 (1).png" id="localpicture">
+            </div>
+            
+                <div id="temp">15C&#176</div>
+            
+        </div>
+        <div id="containerforlocalcity">
+            <div id="localcity">Dnipropetrovsk</div>
+            <div id="localclouds">Clear sky</div>
+        </div>
+    </div>
+    <div class="maincontainer">
+        <div class="containerexchangerate">
+            <div class="header">Курс валют</div>
+                <div class="contentexchangerate">
+                    <div class="containerusd">
+                        <div class="usd">USD</div>
+                        <div class="flag"><img src="../MyProgectWeatherAPP/img/icons_flags/icons8-сша-48.png" alt="USA"></div>
+                        <div class="сurrency"></div>
+                    </div>
+                    <div class="containereur">
+                        <div class="eur">EUR</div>
+                        <div class="flag"><img src="../MyProgectWeatherAPP/img/icons_flags/icons8-флаг-европы-48.png" alt="EUR"></div>
+                        <div class="сurrency"></div>
+                    </div>
+                    <div class="containersny">
+                        <div class="cny">СNY</div>
+                        <div class="flag"><img src="../MyProgectWeatherAPP/img/icons_flags/icons8-китай-48.png" alt="CNY"></div>
+                        <div class="сurrency"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
