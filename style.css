@@ -56,7 +56,7 @@ body {
     color: aliceblue;
 }
 
-#content {
+.content {
     height: 450px;
     display: block;
     width: 1150px;
@@ -68,12 +68,12 @@ body {
     padding-right: 15px;
 }
 
-#date {
+.date {
     display: flex;
     justify-content: space-around;
 }
 
-#characteristics {
+.characteristics {
     display: flex;
     flex-direction: column;
     margin-left: 180px;
@@ -92,7 +92,7 @@ body {
 
 }
 
-#city {
+.city {
     font-size: 40px;
     font-weight: 700;
     margin-top: 45px;
@@ -100,7 +100,7 @@ body {
 
 }
 
-#date {
+.date {
     margin-top: 70px;
     font-size: 40px;
     font-weight: 700px;
@@ -118,15 +118,19 @@ button {
 
 }
 
-#temperature {
+.temperature {
     margin-left: 150px;
 }
 
-#clouds {
+.clouds {
     margin-left: 100px;
 }
 
-#weatherlocation {
+.weatherlocation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     border: 5px solid dotted;
     border-radius: 8px;
     height: 250px;
@@ -137,18 +141,8 @@ button {
     background-color: #d1cf69;
 }
 
-#weatherlocation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
 
-#yourcity {
-    margin-top: 20px;
-}
-
-#cloudsandtemperature {
+.cloudsandtemperature {
     font-size: 50px;
     margin-top: 30px;
     width: 100%;
@@ -160,18 +154,20 @@ button {
     align-items: center;
 }
 
-#localcity {
+.localcity {
     font-size: 25px;
     margin-top: 10px;
 
 }
 
-#yourcity {
+.yourcity {
     font-size: 25px;
     font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
 }
 
-#containerforlocalcity {
+.containerforlocalcity {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -180,7 +176,7 @@ button {
 
 }
 
-#localclouds {
+.localclouds {
     padding-top: 10px;
 }
 

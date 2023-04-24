@@ -1,18 +1,18 @@
 let city;
 let api = "4dbb917c4a994f2b4cadb5fb7972bcb4",
-  temperature = document.getElementById("temperature"),
+  temperature = document.querySelector(".temperature"),
   input = document.getElementById("input"),
-  humidity = document.getElementById("humidity"),
-  wind = document.getElementById("wind"),
-  clearsky = document.getElementById("clearsky"),
-  clouds = document.getElementById("cloud"),
+  humidity = document.querySelector(".humidity"),
+  wind = document.querySelector(".wind"),
+  clearsky = document.querySelector(".clearsky"),
+  clouds = document.querySelector(".cloud"),
   img = document.getElementById("img"),
-  span = document.getElementById("span"),
-  content = document.getElementById("content"),
-  localTemperature = document.getElementById("temp"),
-  myCity = document.getElementById("yourcity"),
-  myCityName = document.getElementById("localcity"),
-  localClearSky = document.getElementById("localclouds"),
+  span = document.querySelector(".span"),
+  content = document.querySelector(".content"),
+  localTemperature = document.querySelector(".temp"),
+  myCity = document.querySelector(".yourcity"),
+  myCityName = document.querySelector(".localcity"),
+  localClearSky = document.querySelector(".localclouds"),
   localPicture = document.getElementById("localpicture"),
   сurrencyRate = document.getElementsByClassName("сurrency"),
   removeBlock = document.getElementById("remove"),
@@ -142,9 +142,9 @@ async function currencyrate() {
       let urlExchangerate = new URL(
         "https://api.apilayer.com/exchangerates_data/convert"
       );
-      urlExchangerate.searchParams.set("to", "uah");
+      urlExchangerate.searchParams.set("to", array[i]);
       urlExchangerate.searchParams.set("from", array[i]);
-      urlExchangerate.searchParams.set("amount", 1);
+      urlExchangerate.searchParams.set("amount", array[i]);
       let response = await fetch(urlExchangerate, requestOptions);
       if (response.ok) {
         let result = await response.json();
