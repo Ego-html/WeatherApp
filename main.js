@@ -1,5 +1,5 @@
 let city;
-let api = "4dbb917c4a994f2b4cadb5fb7972bcb4",
+const api = "4dbb917c4a994f2b4cadb5fb7972bcb4",
   temperature = document.querySelector(".temperature"),
   input = document.getElementById("input"),
   humidity = document.querySelector(".humidity"),
@@ -19,10 +19,20 @@ let api = "4dbb917c4a994f2b4cadb5fb7972bcb4",
   button = document.getElementById("button");
 wrongCity = "You entered the wrong city name, please enter the correct";
 
+document.addEventListener("keyup", function (event) {
+  if (event.key == "Enter" && input.value != "") {
+    submit();
+  }
+});
+content.addEventListener("click", remove);
+input.addEventListener("input", removeBackgroundInputAfterTypeInInput);
+input.addEventListener("click", removeBackgroundInputAfterClickInInput);
+button.addEventListener("click", submit);
+
 async function submit() {
   city = input.value || "London";
   try {
-    let urlWeatherApp = new URL(
+    const urlWeatherApp = new URL(
       "https://api.openweathermap.org/data/2.5/weather"
     );
     urlWeatherApp.searchParams.set("q", city);
@@ -68,6 +78,7 @@ function remove(event) {
   if (target.tagName != "BUTTON") return;
   span.textContent = "";
   img.src = "";
+  img.alt = "";
   temperature.textContent = "";
   wind.textContent = "";
   clearsky.textContent = "";
@@ -86,21 +97,10 @@ function removeBackgroundInputAfterClickInInput() {
 
 submit();
 
-document.addEventListener("keyup", function (event) {
-  if (event.key == "Enter" && input.value != "") {
-    submit();
-  }
-});
-
-content.addEventListener("click", remove);
-input.addEventListener("input", removeBackgroundInputAfterTypeInInput);
-input.addEventListener("click", removeBackgroundInputAfterClickInInput);
-button.addEventListener("click", submit);
-
 navigator.geolocation.getCurrentPosition((position) => {
   const { latitude, longitude } = position.coords;
   async function getLocalWeatherInfo() {
-    let urlWeatherLocal = new URL(
+    const urlWeatherLocal = new URL(
       "https://api.openweathermap.org/data/2.5/weather"
     );
     urlWeatherLocal.searchParams.set("lat", latitude);
